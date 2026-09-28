@@ -38,7 +38,9 @@ const SCHEMA = {
 };
 
 export async function generateBlueprint(input: BuilderInput): Promise<{ blueprint: Blueprint; source: 'gemini' | 'template' }> {
-  const key = (typeof process !== 'undefined' && process.env && process.env.API_KEY) || '';
+  let key = '';
+  try { key = process.env.GEMINI_API_KEY || ''; } catch {}
+  if (!key) { try { key = process.env.API_KEY || ''; } catch {} }
   if (key) {
     try {
       const ai = new GoogleGenAI({ apiKey: key });

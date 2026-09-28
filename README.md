@@ -1,4 +1,4 @@
-# NotebookLM Starter Hub — CMA CGM (prototype)
+# NotebookLM at CMA CGM (prototype)
 
 Run locally: `npm install`, put `GEMINI_API_KEY=...` in `.env.local`, then `npm run dev`.
 - All texts: `data.ts` · Logos: `LOGOS` in `data.ts` · Starter notebook link: `APP.starterNotebookUrl`

@@ -1,4 +1,4 @@
-// All static content of the Starter Hub lives here, so it is easy to edit.
+// All static content of the app lives here, so it is easy to edit.
 
 // ---- Logos: paste an image URL or a data: URI here. Empty = text fallback. ----
 export const LOGOS = {
@@ -7,30 +7,29 @@ export const LOGOS = {
 };
 
 export const APP = {
-  title: 'NotebookLM Starter Hub',
-  subtitle: 'CMA CGM · Your first steps with NotebookLM',
+  title: 'NotebookLM at CMA CGM',
+  subtitle: 'Your first steps with NotebookLM',
   starterNotebookUrl: '#', // provided by the champion / admin
+  videoUrl: '', // URL of the NotebookLM Video Overview (mp4). Empty = placeholder.
 };
 
-export type SectionId = 'home' | 'discover' | 'learn' | 'starter' | 'usecases' | 'build' | 'help';
+export type SectionId = 'home' | 'discover' | 'learn' | 'labs' | 'champion' | 'help';
 
 export const SECTIONS: { id: SectionId; label: string; hint: string }[] = [
   { id: 'discover', label: 'Discover NotebookLM', hint: 'What it is, when to use it' },
-  { id: 'learn', label: 'Learn in 10 minutes', hint: '5 modules + quiz' },
-  { id: 'starter', label: 'Starter Notebook', hint: 'Learn it inside NotebookLM' },
-  { id: 'usecases', label: 'Use cases', hint: 'Ideas for your role' },
-  { id: 'build', label: 'Build my notebook', hint: 'Get a ready-to-build blueprint' },
+  { id: 'learn', label: 'NotebookLM Essentials', hint: '7 modules + quiz · 25 min' },
+  { id: 'labs', label: 'Use Case Labs', hint: '4 hands-on labs by team' },
   { id: 'help', label: 'Help & resources', hint: 'FAQ, videos, champions' },
 ];
 
 export type Badge = { text: string; tone: 'blue' | 'green' | 'amber' | 'grey' };
 
-export const HOME_CARDS: { id: SectionId; title: string; text: string; badges: Badge[]; icon: string; cta: string }[] = [
-  { id: 'discover', icon: 'spark', title: 'Discover NotebookLM', text: 'Understand what it is, and where it fits next to Maia and Copilot.', badges: [{ text: '2 min', tone: 'blue' }, { text: 'Everyone', tone: 'grey' }], cta: 'Discover' },
-  { id: 'learn', icon: 'school', title: 'Learn in 10 minutes', text: 'Five short hands-on modules and a quiz. Everything you need for day one.', badges: [{ text: '10 min', tone: 'blue' }, { text: 'Beginner', tone: 'amber' }, { text: 'Start here', tone: 'green' }], cta: 'Start learning' },
-  { id: 'starter', icon: 'book', title: 'Open the Starter Notebook', text: 'Learn NotebookLM directly inside NotebookLM. Ask it anything about itself.', badges: [{ text: '5 min', tone: 'blue' }, { text: 'Everyone', tone: 'grey' }], cta: 'Open' },
-  { id: 'usecases', icon: 'compass', title: 'Explore my use cases', text: 'Pick your team and your daily pain point. Get a notebook idea and a first question.', badges: [{ text: '3 min', tone: 'blue' }, { text: 'By role', tone: 'grey' }], cta: 'Explore' },
-  { id: 'build', icon: 'build', title: 'Build my first notebook', text: 'Describe a business need. Gemini turns it into a notebook blueprint you can build.', badges: [{ text: '5 min', tone: 'blue' }, { text: 'Champions', tone: 'amber' }, { text: 'Powered by Gemini', tone: 'green' }], cta: 'Build' },
+export const HOME_CARDS: { id: SectionId | 'open'; title: string; text: string; badges: Badge[]; icon: string; cta: string }[] = [
+  { id: 'discover', icon: 'spark', title: 'Discover NotebookLM', text: 'What it is, how it fits next to Maia and Copilot, in a short video.', badges: [{ text: '5 min', tone: 'blue' }, { text: 'Everyone', tone: 'grey' }], cta: 'Discover' },
+  { id: 'learn', icon: 'school', title: 'NotebookLM Essentials', text: 'Seven hands-on modules, including the features most users never discover.', badges: [{ text: '25 min', tone: 'blue' }, { text: 'Start here', tone: 'green' }], cta: 'Start learning' },
+  { id: 'open', icon: 'book', title: 'Open the Starter Notebook', text: 'Your first notebook is ready. Learn NotebookLM directly inside NotebookLM.', badges: [{ text: 'Everyone', tone: 'grey' }], cta: 'Open' },
+  { id: 'labs', icon: 'compass', title: 'Use Case Labs', text: 'Build a real notebook for your team: documentation, dangerous goods, control tower, training.', badges: [{ text: '35–45 min', tone: 'blue' }, { text: 'By team', tone: 'amber' }], cta: 'Explore the labs' },
+  { id: 'champion', icon: 'people', title: 'Champion Lab', text: 'Rebuild and share the Starter Notebook in your environment, testing every key feature.', badges: [{ text: '45 min', tone: 'blue' }, { text: 'Champions', tone: 'amber' }], cta: 'Start the lab' },
   { id: 'help', icon: 'help', title: 'Get help', text: 'FAQ, how-to videos, your champions and team workshops.', badges: [{ text: 'Anytime', tone: 'grey' }], cta: 'Get help' },
 ];
 
